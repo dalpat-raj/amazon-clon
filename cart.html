@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="cart.js" defer></script>
+    <script src="middle.js" defer></script>
+    <script>
+            function Deletee(e){
+        let items = []
+        JSON.parse(localStorage.getItem('items')).map(data=>{
+            if(data.id != e.parentElement.parentElement.children[0].textContent){
+                items.push(data);          
+            }
+        });
+        localStorage.setItem('items',JSON.stringify(items));
+        window.location.reload()
+    }
+    let data = localStorage.getItem('items')
+    if(data == '[]'){
+        localStorage.clear();
+    }else{
+    }
+
+    </script>
+</head>
+<body>
+    <div class="headerr">
+        <div class="navbar">
+            <div class="navlogo">
+                <div class="logo">
+                    <a href="http://127.0.0.1:5500/"><img src="https://pngimg.com/uploads/amazon/amazon_PNG25.png" alt="logo" class="logoimg"></a>
+                </div>
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>
+                        <h6>Hello</h6>
+                        <p>Select your address</p>
+                    </span>
+                </div>
+            </div>
+            <div class="select">
+                <input type="text">            
+                <select name="" id="">
+                    <option value="hii" class="option"><h1>All</h1></option>
+                </select>
+                <i class="fas fa-search"></i>
+            </input>
+        </div>
+        <img src="flag.png" alt="" class="flag">
+        <div class="navnav">
+            <div class="signin">
+               <h6>hello, Sign</h6>
+               <p>Account & List</p>
+            </div>
+            <div class="return">
+                <h6>Returms</h6>
+                <p>& Order</p>
+            </div>
+            <div class="cart_icon">
+                <a href="http://127.0.0.1:5500/cart.html"><i class="fas fa-cart-arrow-down"><p class="cart-item"></p></i></a>
+                <p>Cart</p>
+            </div>
+        </div>       
+        </div>
+    </div>
+
+                         <!-- main  -->
+
+<div class="small-container cart-page">
+
+    <div class= headercart>
+        <div>Product</div>
+        <div>quantity</div>
+        <div>subtotal</div>
+        <div>remove</div>
+    </div>
+    <div class="item-append">
+        <table>
+            
+        </table> 
+        
+    </div>
+
+
+
+<div class="tatal-price">
+    <table>
+        <tr>
+            <td class="subtext">subtotal</td>
+            <td  class="subtotal"></td>
+        </tr>
+        <tr class="btntr">
+            <td><button class="orederbtn">Place Order</button></td>
+        </tr>
+    </table>
+</div>
+</div>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+             <!-- footer    -->
+
+<div class="footer-main">
+    <div class="back-top">
+        <h2>Back to top</h2>
+    </div>
+    <div class="footerr">
+        <div class="footer-item">
+            <h5>Get Know US</h5>
+            <p>About Us</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Amazon Cares</p>
+            <p>Gift a Smile</p>
+        </div>
+        <div class="footer-item">
+            <h5>Connect with Us</h5>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+        <div class="footer-item">
+            <h5>Make Money with Us</h5>
+            <p>Sell on Amazon</p>
+            <p>Sell under Amazon Accelerator</p>
+            <p>Amazon Global Selling</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by Amazon</p>
+            <p>Advertise Your Products</p>
+            <p>Amazon Pay on Merchants</p>
+        </div>
+        <div class="footer-item">
+            <h5>Let Us Help You</h5>
+            <p>COVID-19 and Amazon</p>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>100% Purchase Protection</p>
+            <p>Amazon App Download</p>
+            <p>Amazon Assistant Download</p>
+            <p>Help</p>
+        </div>
+    </div> 
+    <hr> 
+    <div class="footer-2">
+        <div class="flogo">
+            <img src="https://pngimg.com/uploads/amazon/amazon_PNG25.png" alt="">
+            <select name="" id=""><option value="">English</option> </select>
+        </div>
+        <div class="ftext">
+            <p>Australia</p>
+            <p>Brazil</p>
+            <p>Canada</p>
+            <p>China</p>
+            <p>France</p>
+            <p>Germany</p>
+            <p>Italy</p>
+            <p>Japan</p>
+            <p>Mexico</p>
+            <p>Netherlands</p>
+            <p>Poland</p>
+            <p>Singpore</p>
+            <p>Spain</p>
+            <p>Turkey</p>
+            <p>United Arab Emirates</p>
+            <p>United</p>
+            <p>Kingdom</p>
+            <p>United State</p>
+        </div>
+        <div class="fftext">
+            <p>Conditions of Use & SalePrivacy NoticeInterest-Based Ads© 1996-2021, Amazon.com, Inc. or its affiliates</p>
+        </div>
+        
+    </div>  
+</div>
+</body>
+</html>
